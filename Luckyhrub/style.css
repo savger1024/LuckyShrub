@@ -1,0 +1,106 @@
+/*Page 1: Header (and footer) logo; Nav bar*/
+body {
+    background-color: rgb(215, 250, 227);
+    font-family:Arial, Helvetica, sans-serif;
+    padding: 5% solid black;
+}
+.logo {
+    max-height: 20vh;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+}
+header {
+    height: 20%;
+}
+nav ul {
+    list-style: none;
+    text-align: center;
+}
+nav li {
+    display: inline-block;
+    border: 0.1vh solid black;
+    background-color: green;
+    margin-right: 3vw;
+    margin-bottom: 5vh;
+    height: 4vh;
+    width: 8vw;
+    border-radius: 15px;
+    padding-top: auto;
+    padding-bottom: auto;
+}
+
+nav li:hover {
+    background-color: rgb(11, 73, 11);
+}
+
+li > a {
+    position: relative;
+    top: 20%;
+    text-decoration: none;
+    color: white;
+}
+
+/*Page 2: The three rows; The footer*/
+
+article > img {
+    width: 100%;
+}
+
+section {
+    display: flex;
+}
+
+article {
+    flex: 1;
+    padding: 1%;
+}
+
+footer {
+    display: flex;
+}
+
+footer div {
+    flex: 1;
+}
+
+/*Page 3: Banner*/
+
+.banner {
+  position: relative;
+  width: 100%;
+  height: 80vh;
+  background-image: url('https://bit.ly/4eM06Vv'); /*Reforestation deal before*/
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+}
+
+.banner::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-image: url('https://bit.ly/4i61o0j'); /*Reforestation Deal After*/
+  background-size: cover;
+  background-position: center;
+  opacity: 0;
+  transition: opacity 9999999s ease-in-out;
+  
+}
+
+.banner:hover::before {
+  opacity: 1;
+  transition: opacity 2s ease-in-out;
+}
+
+/*Page 4: 
+
+:root {
+    --oasisAfter: 'https://lh3.googleusercontent.com/pw/AP1GczNGb1qgcoab6b5nOLIfa_kyWi6vjJ2ajDAXMVE43doUti6RBfZZqt7tf0TubKhNEZsV77zaT3JLDNUaHQ4HGLu4EtvYwni6gANIOdi3s9kDnrpKnmg9JoAEc7b7YxwBT01zej0RpYbsHiD4n0SiiCs=w512-h512-s-no?authuser=0';
+    --gardenBefore: 'https://lh3.googleusercontent.com/pw/AP1GczM5Xjasom5HM46U4YZvhGEvfOgmU2-rMC5JLV9d-K9moQcD2VCmV_2pcw6bSLvgVmz_x6N_0CPPAF406lDT_RVPzPluA23q5CycySk2fmQVigz0oaeMLNZjE8z4Z_-nbpPYVWLpAXTkabUkRhV38fE=w512-h512-s-no?authuser=0';
+    --logo: 'https://lh3.googleusercontent.com/pw/AP1GczP40Zmcp98ns_RBQ1ez4A_eLv0XhOvJ-2RMhwY-oWo_AuNWX33ND5vWj0-UWS3NoNiSg0oUJsIVwBGiaVH6MJN8u-3DtsKmcYkMFcQxkAzhD4H8eooHZ4Tme2TGIY7czUA0Om2MdhSTUmwJA3KJ3a0=w391-h787-s-no?authuser=0';
+
+}
