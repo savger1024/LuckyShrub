@@ -68,39 +68,67 @@ footer div {
 
 .banner {
   position: relative;
-  width: 100%;
-  height: 80vh;
-  background-image: url('https://bit.ly/4eM06Vv'); /*Reforestation deal before*/
+  width: 100%; 
   background-size: cover;
   background-position: center;
   overflow: hidden;
 }
-
 .banner::before {
   content: '';
   position: absolute;
   top: 0;
   left: 0;
   right: 0;
-  bottom: 0;
-  background-image: url('https://bit.ly/4i61o0j'); /*Reforestation Deal After*/
+  bottom: 0;  
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 9999999s ease-in-out;
-  
+  transition: opacity 9999999s ease-in-out; 
 }
-
 .banner:hover::before {
   opacity: 1;
-  transition: opacity 2s ease-in-out;
+  transition: opacity 3s ease-in-out;
+}
+div#reforestation {
+    background-image: url('https://bit.ly/4eM06Vv'); /*Reforestation deal before*/
+    height: 80vh;
+}
+#reforestation::before {
+    background-image: url('https://bit.ly/4i61o0j'); /*Reforestation Deal After*/
 }
 
-/*Page 4: 
 
-:root {
-    --oasisAfter: 'https://lh3.googleusercontent.com/pw/AP1GczNGb1qgcoab6b5nOLIfa_kyWi6vjJ2ajDAXMVE43doUti6RBfZZqt7tf0TubKhNEZsV77zaT3JLDNUaHQ4HGLu4EtvYwni6gANIOdi3s9kDnrpKnmg9JoAEc7b7YxwBT01zej0RpYbsHiD4n0SiiCs=w512-h512-s-no?authuser=0';
-    --gardenBefore: 'https://lh3.googleusercontent.com/pw/AP1GczM5Xjasom5HM46U4YZvhGEvfOgmU2-rMC5JLV9d-K9moQcD2VCmV_2pcw6bSLvgVmz_x6N_0CPPAF406lDT_RVPzPluA23q5CycySk2fmQVigz0oaeMLNZjE8z4Z_-nbpPYVWLpAXTkabUkRhV38fE=w512-h512-s-no?authuser=0';
-    --logo: 'https://lh3.googleusercontent.com/pw/AP1GczP40Zmcp98ns_RBQ1ez4A_eLv0XhOvJ-2RMhwY-oWo_AuNWX33ND5vWj0-UWS3NoNiSg0oUJsIVwBGiaVH6MJN8u-3DtsKmcYkMFcQxkAzhD4H8eooHZ4Tme2TGIY7czUA0Om2MdhSTUmwJA3KJ3a0=w391-h787-s-no?authuser=0';
+/*Page 4: <img>s' animation*/
 
+.image-container {
+  position: relative;
+  width: 300px; /* Adjust container width */
+  height: 200px; /* Adjust container height */
+  overflow: hidden;
+}
+
+.image-container img {
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  object-fit: cover; /* Ensures the image scales nicely */
+  transition: opacity var(--duration) ease-in-out; /* Use a CSS variable for transition duration */
+}
+
+.background-image {
+  opacity: 1;
+  z-index: 1;
+}
+
+.foreground-image {
+  opacity: 0;
+  z-index: 2;
+  --duration: 999999999s;
+}
+
+.image-container:hover .foreground-image {
+  opacity: 1;
+  --duration: 3s;
 }
