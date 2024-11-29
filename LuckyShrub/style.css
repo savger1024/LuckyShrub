@@ -90,11 +90,11 @@ footer div {
   transition: opacity 3s ease-in-out;
 }
 div#reforestation {
-    background-image: url('https://bit.ly/4eM06Vv'); /*Reforestation deal before*/
-    height: 80vh;
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczMv35BcOUY_6Ie5Rf2HftDATGgLrHySzYCS2_xaw6yM8liYqSSFGMQD5G6eAz784DLhSSEoZSSTuXVVdtQvn-R8El5SdzufEDmLN03DoW2KLHxa1FR7k_sFB5G6JFYxhsWYertbxt82rJIfqSmKjLs=w704-h384-s-no?authuser=0'); /*Reforestation deal before*/
+    height: 95vh;
 }
 #reforestation::before {
-    background-image: url('https://bit.ly/4i61o0j'); /*Reforestation Deal After*/
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPLXwPKWPZNXLMsCgLhxHJa1mIcOPaGMgIYmb1jQER0mcF3ekfnRtCRkEZGzSK4uBIYUMCoO83zXEIyK228cE8y0n5jlU9_ScRtDweY0o4Prrn_yZZy002YiO4foPreBFHcFaY2ygtzk47H176iOeA=w704-h384-s-no?authuser=0'); /*Reforestation Deal After*/
 }
 
 
@@ -102,8 +102,8 @@ div#reforestation {
 
 .image-container {
   position: relative;
-  width: 300px; /* Adjust container width */
-  height: 200px; /* Adjust container height */
+  width: 100%; /* Adjust container width */
+  aspect-ratio: 1 / 1; /* Maintain a 1:1 ratio */
   overflow: hidden;
 }
 
