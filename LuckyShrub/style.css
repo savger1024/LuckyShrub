@@ -1,9 +1,4 @@
 /*Page 1: Header (and footer) logo; Nav bar*/
-body {
-    background-color: rgb(215, 250, 227);
-    font-family:Arial, Helvetica, sans-serif;
-    padding: 5% solid black;
-}
 .logo {
     max-height: 20vh;
     display: block;
@@ -25,7 +20,7 @@ nav li {
     margin-bottom: 5vh;
     height: 4vh;
     width: 8vw;
-    border-radius: 15px;
+    border-radius: 5vh;
     padding-top: auto;
     padding-bottom: auto;
 }
@@ -41,30 +36,50 @@ li > a {
     color: white;
 }
 
-/*Page 2: The three rows; The footer*/
+/*Page 2: Default styles */
+p {
+  font-size: 1.4rem;
+  color: #5a5a00;
+  font-family: 'Roboto', sans-serif;
+  font-weight: 400;
+  line-height: 1.6;
+  margin-bottom: 1rem;
+}
+h1, h2, h3, h4, h5, h6 {
+    font-family: 'Montserrat', sans-serif;
+    font-weight: 700;
+    color: #2e5a37;
+    margin-bottom: 1rem;
+}
+body {
+    margin: 0;
+    padding: 0;
+    font-family: 'Roboto', sans-serif;
+    color: #333;
+    background-color: #f5f5f5;
+}
+
+/*Page 3: The three rows; The footer*/
 
 article > img {
     width: 100%;
 }
-
 section {
     display: flex;
 }
-
 article {
     flex: 1;
     padding: 1%;
+    border: 0.4vh solid rgba(209, 212, 25, 0.767);
 }
-
 footer {
     display: flex;
 }
-
 footer div {
     flex: 1;
 }
 
-/*Page 3: Banner*/
+/*Page 4: Banner*/
 
 .banner {
   position: relative;
@@ -72,7 +87,8 @@ footer div {
   background-size: cover;
   background-position: center;
   overflow: hidden;
-}
+} /*two different solutions of image transition (using div and img),
+because here I had to use text inside the image*/
 .banner::before {
   content: '';
   position: absolute;
@@ -83,27 +99,53 @@ footer div {
   background-size: cover;
   background-position: center;
   opacity: 0;
-  transition: opacity 9999999s ease-in-out; 
+  transition: opacity 9999999s ease-in-out; /*so it won't transition back*/
 }
 .banner:hover::before {
   opacity: 1;
   transition: opacity 3s ease-in-out;
 }
 div#reforestation {
-    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczMv35BcOUY_6Ie5Rf2HftDATGgLrHySzYCS2_xaw6yM8liYqSSFGMQD5G6eAz784DLhSSEoZSSTuXVVdtQvn-R8El5SdzufEDmLN03DoW2KLHxa1FR7k_sFB5G6JFYxhsWYertbxt82rJIfqSmKjLs=w704-h384-s-no?authuser=0'); /*Reforestation deal before*/
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczP244Nv81fK0CrCqUEy8IgaAYGC7wWrSfAx1qv-HGDy_QEhn49Uv00_mgJW__KB6vkKjzLH1nGyTZAYESDQaA4BwFQ8sPhCVaiII7lZazMYlxSpT6MPljbBefQnuZhrqv1IOU7r3ERbvVTLoTuC_rQ=w704-h384-s-no?authuser=0'); /*Reforestation deal before;*/
     height: 95vh;
 }
 #reforestation::before {
-    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczPLXwPKWPZNXLMsCgLhxHJa1mIcOPaGMgIYmb1jQER0mcF3ekfnRtCRkEZGzSK4uBIYUMCoO83zXEIyK228cE8y0n5jlU9_ScRtDweY0o4Prrn_yZZy002YiO4foPreBFHcFaY2ygtzk47H176iOeA=w704-h384-s-no?authuser=0'); /*Reforestation Deal After*/
+    background-image: url('https://lh3.googleusercontent.com/pw/AP1GczMmdgiLNK4Wfqlf__uGuNVtM3RXgIQD1BjFVtQS5Iq0zdTd1zcxWHwTuqZuBsSDB---BwhT4RSyftnzeb5lhaHvnvyveWl8MWaG1ywWX9sOMh0p-kuKk2mZX1ccIcqo05gcos7LAbwQQ7q7IybrL8k=w704-h384-s-no?authuser=0'); /*Reforestation Deal After*/
+}
+.banner h1 {
+    position: absolute;   
+    left: 23%;
+    color: #e4c616;
+    font-family: Arial, sans-serif;
+    font-size: 5rem;
+    text-shadow: 2px 2px 4px black;
+}
+#banner1 { /*first line of the banner part*/
+  top: 0%;
+}
+#banner2 {
+  top: 60%;
+}
+#banner3 {
+  top: 73%;
+}
+.big-red-btn {
+  background-color: #e41d16;
+  border: 1vh solid #8b0000;
+  padding: 1vh 5vh;
+  border-radius: 10vh;
+  margin-left: 3vw;
+  text-decoration: none;
+  color: #e4c616;
 }
 
 
-/*Page 4: <img>s' animation*/
+/*Page 5: <img>s' animation*/
 
 .image-container {
   position: relative;
-  width: 100%; /* Adjust container width */
-  aspect-ratio: 1 / 1; /* Maintain a 1:1 ratio */
+  width: 100%;
+  aspect-ratio: 1 / 1; 
   overflow: hidden;
 }
 
@@ -113,8 +155,8 @@ div#reforestation {
   left: 0;
   width: 100%;
   height: 100%;
-  object-fit: cover; /* Ensures the image scales nicely */
-  transition: opacity var(--duration) ease-in-out; /* Use a CSS variable for transition duration */
+  object-fit: cover; 
+  transition: opacity var(--duration) ease-in-out; 
 }
 
 .background-image {
@@ -132,3 +174,4 @@ div#reforestation {
   opacity: 1;
   --duration: 3s;
 }
+
